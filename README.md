@@ -14,7 +14,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false, foreign_key: true|
+|name|string|null: false, foreign_key: true|
 
 ### Association
 - has_many : member
@@ -24,7 +24,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, foreign_key: true|
+|name|string|null: false, foreign_key: true|
 
 ### Association
 - has_many : member
