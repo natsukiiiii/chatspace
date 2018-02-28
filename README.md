@@ -17,9 +17,9 @@
 |name|string|null: false, foreign_key: true|
 
 ### Association
-- has_many : member
+- has_many : groups, through: :members
 - has_many : message
-- has_many : group
+- has_many : members
 
 
 
@@ -30,9 +30,9 @@
 |name|string|null: false, foreign_key: true|
 
 ### Association
-- has_many : member
+- has_many : users, through: :members
 - has_many : messsage
-- has_many : user
+- has_many : members
 
 ## messageテーブル
 
