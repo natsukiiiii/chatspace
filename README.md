@@ -14,20 +14,25 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false, foreign_key: true|
+|name|string|null: false, foreign_key: true|
 
 ### Association
 - has_many : member
+- has_many : message
+- has_many : group
+
 
 
 ## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, foreign_key: true|
+|name|string|null: false, foreign_key: true|
 
 ### Association
 - has_many : member
+- has_many : messsage
+- has_many : user
 
 ## messageテーブル
 
