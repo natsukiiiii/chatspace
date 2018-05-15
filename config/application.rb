@@ -13,5 +13,8 @@ module Chatspace
     # -- all .rb files in that directory are automatically loaded.
   config.i18n.default_locale = :ja
   config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
+  config.time_zone = 'Tokyo'
+
   end
 end
+# Time::DATE_FORMATS[:default] = '%Y/%m/%d %H:%M'
