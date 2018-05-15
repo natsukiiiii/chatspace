@@ -40,8 +40,8 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true, index: true|
 |group_id|integer|null: false, foreign_key: true, index: true|
-|body|text|null: false, foreign_key: true|
-|image|string|null: false, foreign_key: true|
+|body|text|foreign_key: true|
+|image|string|foreign_key: true|
 
 
 ### Association
