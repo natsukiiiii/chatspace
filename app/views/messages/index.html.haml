@@ -26,63 +26,6 @@
       .chatpage__talk-talk
         HEEEEEEEEEEEEEELLLLLLLLLLLLo
 
-      .chatpage__talk-name
-        NATSUKI
-
-        .chatpage__talk-time
-          2018/07/07 07:07:07
-
-      .chatpage__talk-talk
-        HEEEEEEEEEEEEEELLLLLLLLLLLLo
-
-      .chatpage__talk-name
-        NATSUKI
-
-        .chatpage__talk-time
-          2018/07/07 07:07:07
-
-      .chatpage__talk-talk
-        HEEEEEEEEEEEEEELLLLLLLLLLLLo
-
-      .chatpage__talk-name
-        NATSUKI
-
-        .chatpage__talk-time
-          2018/07/07 07:07:07
-
-      .chatpage__talk-talk
-        HEEEEEEEEEEEEEELLLLLLLLLLLLo
-
-
-      .chatpage__talk-name
-        NATSUKI
-
-        .chatpage__talk-time
-          2018/07/07 07:07:07
-
-      .chatpage__talk-talk
-        HEEEEEEEEEEEEEELLLLLLLLLLLLo
-
-
-      .chatpage__talk-name
-        NATSUKI
-
-        .chatpage__talk-time
-          2018/07/07 07:07:07
-
-      .chatpage__talk-talk
-        HEEEEEEEEEEEEEELLLLLLLLLLLLo
-
-
-      .chatpage__talk-name
-        NATSUKI
-
-        .chatpage__talk-time
-          2018/07/07 07:07:07
-
-      .chatpage__talk-talk
-        HEEEEEEEEEEEEEELLLLLLLLLLLLo
-
 
 
 
@@ -95,7 +38,14 @@
       .chatpage__talk-type
 
         .chatpage__talk-type-left-message
-          type a message
+          .form
+            = form_for [@group, @message] do |f|
+              = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+              .form__mask
+                = f.label :image, class: 'form__mask__image' do
+                  = fa_icon 'picture-o', class: 'icon'
+                  = f.file_field :image, class: 'hidden'
+              = f.submit 'Send', class: 'form__submit'
 
           .chatpage__talk-type-right
             Send
