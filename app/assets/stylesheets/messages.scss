@@ -80,9 +80,9 @@
   }
 
   &__talk-type-left-message{
-    font-size: 16px;
-    color:#434A54;
-    margin-left: 10px;
+    // font-size: 16px;
+    // color:#434A54;
+    // margin-left: 10px;
     // background-color:#434A54;
     // border: none;
     // color: white;
@@ -93,17 +93,14 @@
     // padding: 0 30px;
   }
 
-  &__talk-type-left-icon{
-    float: right;
-    margin-right: 10px;
-  }
+
 .chatpage__talk-type-area{
   background-color: #eeeeee
 }
-  &__talk-type-right{
+.form {
     height: 50px;
     margin-left:15px;
-    float: right;
+    // float: right;
     background-color: #38AEF0;
     width: 70px;
     font-size: 20px;
