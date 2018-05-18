@@ -12,11 +12,13 @@
           .fa.fa-edit
 
   .sidebar__talk
+
     .sidebar__talk-group
       - current_user.groups.each do |group|
         = link_to group_messages_path(group) do
-          .group__name
-            = group.name
-          .group__message
-            = group.show_last_message
+          .groups
+            .group__name
+              = group.name
+            .group__message
+              = group.show_last_message
 

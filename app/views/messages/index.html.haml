@@ -1,21 +1,24 @@
 = render 'messages/side_bar'
 .chatpage
-  .chatpage__talk-group
+  .chatpage__header
 
     .chatpage__talk-group-editbox
-      .chatpage__talk-group-edit
-        Edit
+      = link_to "Edit", edit_group_path(@group), method: :get
+    .chatpage__talk-group-nm
+      .chatpage__talk-group-name
+        = @group.name
+
+      .chatpage__talk-member
+        .chatpage__talk-member-m
+          Member :
 
 
-    .chatpage__talk-group-name
-      group
+          .chatpage__talk-member-n
+            = current_user.name
 
-    .chatpage__talk-member
-      members:natsuki
+  .chatpage__talk-page
 
-  .chatpage__talk
-
-    .chatpage__talk-main
+    .chatpage__talk-page-main
       .messages
         = render @messages
 
@@ -26,18 +29,18 @@
 
 
 
-    .chatpage__talk-type-area
 
-      .chatpage__talk-type
+  .chatpage__talk-type
 
-        .chatpage__talk-type-left-message
-          .form
-            = form_for [@group, @message] do |f|
-              = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-              .form__mask
-                = f.label :image, class: 'form__mask__image' do
-                  = fa_icon 'picture-o', class: 'icon'
-                  = f.file_field :image, class: 'hidden'
-              = f.submit 'Send', class: 'form__submit'
+    .form__message
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        .form__submit
+          = f.submit 'Send', class: 'form__submit'
 
 
