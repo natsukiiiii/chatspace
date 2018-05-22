@@ -11,5 +11,10 @@ module Chatspace
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+  config.i18n.default_locale = :ja
+  config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
+  config.time_zone = 'Tokyo'
+
   end
 end
+# Time::DATE_FORMATS[:default] = '%Y/%m/%d %H:%M'
