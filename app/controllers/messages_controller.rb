@@ -16,6 +16,10 @@ class MessagesController < ApplicationController
       flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
+respond_to do |format|
+     format.html{redirect_to group_messages_path(@group)}
+     format.json
+   end
   end
 
   private
