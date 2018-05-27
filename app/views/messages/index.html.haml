@@ -8,13 +8,16 @@
       .chatpage__talk-group-name
         = @group.name
 
+
       .chatpage__talk-member
         .chatpage__talk-member-m
           Member :
 
 
+
           .chatpage__talk-member-n
-            = current_user.name
+            - @group.users.each do |user|
+              = user.name
 
   .chatpage__talk-page
 
