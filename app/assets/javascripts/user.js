@@ -51,14 +51,15 @@ $(document).on("turbolinks:load", function(){
       $('#chat-group-users').append(html)
   };
 
-  $("#user-search-result").on("click", ".user-search-add", function(e){
-    e.preventDefault();
-    $(this).parent().remove();
-    var user = $(this).data();
-    addUser(user);
-  });
-  $("#user-search-result").on("click",".user-search-remove", function(e){
-    e.preventDefault();
-    $(this).parent().remove();
-  });
+    $("#user-search-result").on("click", ".user-search-add", function(e){
+      e.preventDefault();
+      $(this).parent().remove();
+      var user = $(this).data();
+      addUser(user);
+    });
+    $("#chat-group-users").on("click",".user-search-remove", function(e){
+      e.preventDefault();
+      $(this).parent().remove();
+
+    });
   });
