@@ -1,14 +1,11 @@
 
 .chatpage {
   float: right;
-
+  height: 100vh;
    &__header {
-     // box-sizing: border-box;
      height: 100px;
      padding:0 40px;
    }
-
-
   &__talk-group-nm {
    float: left;
   }
@@ -20,31 +17,28 @@
     margin-bottom: 15px;
   }
 
-  &__talk-group-editbox{
-    border: 1px solid #38AEF0;
-    color:#38AEF0;
-    float: right;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 28px;
-    padding: 0 20px;
-    text-decoration: none;
-
-  }
+  // &__talk-group-editbox{
+  //   border: 1px solid #38AEF0;
+  //   color:#38AEF0;
+  //   float: right;
+  //   height: 40px;
+  //   line-height: 40px;
+  //   margin-top: 28px;
+  //   padding: 0 20px;
+  //   text-decoration: none;
+  // }
 
 
   &__talk-member {
     font-size: 12px;
     color:#999999;
     padding:0px 40px 0px 40px;
-    // height:27px;
     border-bottom: 1px solid #eeeeee;
   }
 
 
 
   &__talk-member-n {
-    // float: left;
     padding-right: 10px;
     display: inline;
   }
@@ -58,10 +52,7 @@
     display: flex;
   }
 
-
-
   &__talk-talk {
-    // background-color:#AAAAAA;
     padding: 0px 40px 40px 40px;
     font-size: 14px;
     color:#434A54;
@@ -69,9 +60,6 @@
   }
 
   &__talk-time {
-    // background-color:#AAAAAA;
-    // padding: 0px 40px 40px 40px;
-    // float:right;
     font-size: 12px;
     color:#999999;
     margin-left: 10px;
@@ -91,7 +79,7 @@
   width:calc(100vw - 300px);
   float: right;
   box-sizing: border-box;
-  height: calc(100vh - 100px - 90px);
+  height: calc(100vh - 190px);
   background-color:#FAFAFA;
   overflow:scroll;
   padding: 46px 40px 0;
@@ -107,7 +95,6 @@ display: flex;
 color: #434a54;
 font-size: 16px;
 font-weight: bold;
-// display: block;
 }
 .upper-message__date{
 color: #999;
@@ -130,8 +117,6 @@ margin-top: 10px;
   border: 0;
 }
 
-
-
 .form__message {
     border: none;
     box-sizing: border-box;
@@ -140,9 +125,8 @@ margin-top: 10px;
     padding:0 10px;
     width: calc(100% - 130px);
     font-size: 20px;
-
-
   }
+
 .form__mask{
   background-color: #fff;
   float:left;
@@ -153,13 +137,25 @@ margin-top: 10px;
   display: none;
 }
 
+
+.chatpage__talk-group-editbox{
+  border: 1px solid #38AEF0;
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 28px;
+  padding: 0 20px;
+}
+.chatpage__talk-group-editbox > a {
+  color:#38AEF0;
+}
+
 .form__submit{
 background-color:#38AEF0;
 border:none;
 color:#fff;
 float:right;
 height: 50px;
-// margin: 10px;
 padding:0 10px;
 font-size: 16px;
 text-align: center;
