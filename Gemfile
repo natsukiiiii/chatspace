@@ -64,3 +64,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'carrierwave'
 gem 'mini_magick'
+
+group :production do
+  gem 'unicorn'
+end
