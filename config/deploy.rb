@@ -39,7 +39,7 @@ set :repo_url, "git@example.com:me/my_repo.git"
 # set :ssh_options, verify_host_key: :secure
 
 
-lock '~> 3.10.2'
+lock '3.11.0'
 
 set :application, 'chatspace'
 set :repo_url,  'git@github.com:natsukiiiii/chatspace.git'
