@@ -86,3 +86,11 @@ namespace :deploy do
   after :finishing, 'deploy:cleanup'
 end
 
+namespace :config do
+  task :display do
+    Capistrano::Configuration.env.keys.each do |key|
+      p "#{key} => #{fetch(key)}"
+    end
+  end
+end
+

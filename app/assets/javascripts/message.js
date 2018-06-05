@@ -45,9 +45,10 @@ $(document).on("turbolinks:load", function(){
   })
 
   function getMessage() {
+    if (location.pathname.match(/\/groups\/\d+\/messages/)){
     var newMessageId = $('.message').last().data('message-id');
-    var url = location.pathname.match(/\/groups\/\d+\/messages/);
-    $.ajax({
+    var url = location.pathname
+      $.ajax({
       url: url,
       type: "GET",
       data: {id: newMessageId},
@@ -65,5 +66,6 @@ $(document).on("turbolinks:load", function(){
       $(".chat__form__submitbtn").prop('disabled', false);
     })
   }
+}
   setInterval(getMessage, 5000);
 })
